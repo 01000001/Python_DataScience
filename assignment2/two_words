@@ -1,0 +1,13 @@
+SELECT count(*) 
+FROM (
+	SELECT docid AS "var1"
+	FROM frequency
+	WHERE term = "transactions"
+)
+INNER JOIN (
+	SELECT docid AS "var2"
+	FROM frequency
+	WHERE term = "world"
+	
+)
+WHERE var1 = var2;
